@@ -20,13 +20,13 @@ Credits for the concept to Matt D. Smith ([@mds](http://www.twitter.com/mds)), a
 ### Usage example
 
 ```javascript
-import FloatLabelTextInput from 'react-native-floating-label-text-image-input';
+import FancyTextField from 'react-native-floating-label-text-image-input';
 
 var SomeComponent = React.createClass({
   render: function() {
     return (
       <View>
-        <FloatLabelTextInput
+        <FancyTextField
           placeholder={'Email'}
 					placeholderIcon={require('./images/icon_email.png')}
           value={'abc@g.com'}
