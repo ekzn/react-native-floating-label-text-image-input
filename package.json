@@ -1,6 +1,6 @@
 {
 	"name": "react-native-floating-label-text-image-input",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description":
 		"A React Native component for floating label text input with image place holder option Edit",
 	"main": "index.js",
