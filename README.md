@@ -19,6 +19,8 @@ Credits for the concept to Matt D. Smith ([@mds](http://www.twitter.com/mds)), a
 
 ### Usage example
 
+([@SampleDemo](https://github.com/erumawan/UIUXSample1))
+
 ```javascript
 import FancyTextField from 'react-native-floating-label-text-image-input';
 
