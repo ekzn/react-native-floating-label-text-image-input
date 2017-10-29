@@ -1,0 +1,42 @@
+{
+	"name": "react-native-floating-label-text-image-input",
+	"version": "1.0.0",
+	"description":
+		"A React Native component for floating label text input with image place holder option Edit",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha --reporter spec"
+	},
+	"repository": {
+		"type": "git",
+		"url":
+			"git+https://github.com/erumawan/react-native-floating-label-text-image-input.git"
+	},
+	"keywords": [
+		"react-native",
+		"input",
+		"image",
+		"place",
+		"holder",
+		"floating",
+		"label",
+		"textinput",
+		"placeholder"
+	],
+	"author":
+		"“Erum <“erumawan.21@gmail.com\n\nnpm set init.author.url “https://github.com/erumawan>",
+	"license": "ISC",
+	"bugs": {
+		"url":
+			"https://github.com/erumawan/react-native-floating-label-text-image-input/issues"
+	},
+	"homepage":
+		"https://github.com/erumawan/react-native-floating-label-text-image-input#readme",
+	"engines": {
+		"node": ">=4.2.4"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"mocha": "^4.0.1"
+	}
+}
