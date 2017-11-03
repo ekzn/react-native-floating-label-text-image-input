@@ -5,6 +5,8 @@ A React Native component for floating label text input with image place holder o
 This component is originally based on ([@react-native-floating-label-text-input](https://github.com/eyaleizenberg/react-native-floating-label-text-input))
 by ([@eyaleizenberg](https://github.com/eyaleizenberg))
 
+[![NPM](https://nodei.co/npm/react-native-floating-label-text-input.png)](https://npmjs.org/package/react-native-floating-label-text-input)
+
 ### What is this?
 This component will render an iOS styled text field with floating label animation. When there is no value, the placeholder will be centered. Once there is a value, the value will slide down and the label will fade in and slide up.
 
@@ -57,4 +59,3 @@ erumawan.21@gmail.com
 
 
 Thanks and Enjoy! :)
- 
