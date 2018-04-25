@@ -99,6 +99,7 @@ class FancyTextField extends Component {
 
 	static defaultProps = {
 		selectionColor: '#000000', 
+		textColor: '#666666',
 		unselectedColor: '#666666'
 	};
 
@@ -131,6 +132,7 @@ class FancyTextField extends Component {
 	}
 
 	render() {
+		const {textColor} = this.props;
 		return (
 			<View style={styles.container}>
 				<View style={styles.viewContainer}>
@@ -155,7 +157,7 @@ class FancyTextField extends Component {
 							<TextInput
 								{...this.props}
 								ref="input"
-								style={[styles.valueText, { color: 'white' }]}
+								style={[styles.valueText, {color: textColor}]}
 								defaultValue={this.props.defaultValue}
 								value={this.state.text}
 								maxLength={this.props.maxLength}
