@@ -96,6 +96,13 @@ class TextFieldHolder extends Component {
 }
 
 class FancyTextField extends Component {
+
+	static defaultProps = {
+		selectionColor: '#000000', 
+		textColor: '#666666',
+		unselectedColor: '#666666'
+	};
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -115,7 +122,9 @@ class FancyTextField extends Component {
 
 	withBorder() {
 		if (!this.props.noBorder) {
-			return styles.withBorder;
+			const {selectionColor, unselectedColor} = this.props;
+			const borderColor = this.state.focused ? selectionColor : unselectedColor;
+			return [styles.withBorder, {borderColor}];
 		}
 	}
 	withIcon() {
@@ -123,6 +132,7 @@ class FancyTextField extends Component {
 	}
 
 	render() {
+		const {textColor} = this.props;
 		return (
 			<View style={styles.container}>
 				<View style={styles.viewContainer}>
@@ -147,7 +157,7 @@ class FancyTextField extends Component {
 							<TextInput
 								{...this.props}
 								ref="input"
-								style={[styles.valueText, { color: 'white' }]}
+								style={[styles.valueText, {color: textColor}]}
 								defaultValue={this.props.defaultValue}
 								value={this.state.text}
 								maxLength={this.props.maxLength}
@@ -207,9 +217,9 @@ class FancyTextField extends Component {
 	}
 
 	labelStyle() {
-		if (this.state.focused) {
-			return styles.focused;
-		}
+		const {selectionColor, unselectedColor} = this.props;
+		const color = this.state.focused ? selectionColor : unselectedColor;
+		return {color}; 
 	}
 
 	placeholderValue() {
@@ -254,8 +264,7 @@ const styles = StyleSheet.create({
 	},
 	fieldLabel: {
 		height: 10,
-		fontSize: 9,
-		color: '#ffffff'
+		fontSize: 9
 	},
 	paddingLeft: {
 		paddingLeft: PADDING_LEFT
@@ -268,16 +277,11 @@ const styles = StyleSheet.create({
 	},
 	withBorder: {
 		borderBottomWidth: 1 / 2,
-		borderColor: '#ffffff'
 	},
 	valueText: {
 		height: 42,
 		lineHeight: 34,
-		fontSize: 16,
-		color: '#ffffff'
-	},
-	focused: {
-		color: '#ffffff'
+		fontSize: 16
 	},
 	iconContainter: {
 		width: ICON_SIZE,
